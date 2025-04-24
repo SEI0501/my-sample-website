@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CAKE＆DONUTS SAMPLE</title>
+<style>
+body {
+  font-family: 'Hiragino Mincho Pro', 'ヒラギノ明朝 ProN', serif;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+/* 全体を中央に表示し、最大幅を制限 */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* 画像が画面幅に収まるようにする */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* タイトル（h1） */
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* メニュータイトル（h2やh3） */
+h2, h3 {
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.3rem;
+}
+
+/* テキスト部分の余白 */
+p {
+  margin-bottom: 1.5rem;
+}
+
+/* リストの調整 */
+ul {
+  padding-left: 1.5rem;
+}
+
+/* --- スマホとパソコンでレイアウトを切り替える例 --- */
+/* 画像と説明を横並びにしたい場合は以下のようにする */
+.flex-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.flex-box .image,
+.flex-box .text {
+  flex: 1 1 300px; /* スマホでは縦並び、PCでは横並びに */
+}
+@media (max-width: 600px) {
+	h1 {
+	font-size: 1.2rem;
+	}
+	h2, h3 {
+	font-size: 1.2rem;
+	}
+	body {
+	font-size: 14px;
+	}
+h1 {
+  font-family: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', 'Hiragino Mincho ProN', 'HGS明朝E', 'ＭＳ Ｐ明朝', serif;
+  position: relative;
+  padding: 1.5rem 2rem;
+  -webkit-box-shadow: 0 2px 14px rgba(0, 0, 0, .1);
+  box-shadow: 0 2px 14px rgba(0, 0, 0, .1);
+}
+
+h1:before,
+h1:after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  content: '';
+  background-image: -webkit-linear-gradient(315deg, #704308 0%, #ffce08 40%, #e1ce08 60%, #704308 100%);
+  background-image: linear-gradient(135deg, #704308 0%, #ffce08 40%, #e1ce08 60%, #704308 100%);
+}
+
+h1:before {
+  top: 0;
+}
+
+h1:after {
+  bottom: 0;
+}
+ul, ol {
+  background: #FF99FF;
+  box-shadow: 0px 0px 0px 10px #3399FF;/*線の外側*/
+  border: dashed 2px #3366FF;/*破線*/
+  border-radius: 9px;
+  margin-left: 10px;/*はみ出ないように調整*/
+  margin-right: 10px;/*はみ出ないように調整*/
+  padding: 0.5em 0.5em 0.5em 2em;
+}
+
+ul li, ol li {
+  line-height: 1.5;
+  padding: 0.5em 0;
+}
+.menu {
+	background-color:#FFEEFF;
+}
+.menu h2 {
+  position: relative;
+  padding: 5px 26px 5px 42px;
+  background: #fff0d9;
+  font-size: 20px;
+  color: #2d2d2d;
+  margin-left: -33px;
+  line-height: 1.3;
+  border-bottom: solid 3px orange;
+  z-index:-2;
+}
+
+.menu h2:before {
+  position: absolute;
+  content: '';
+  left: -2px;
+  top: -2px;
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: solid 40px white;
+  border-bottom: solid 79px transparent;
+  z-index: -1;
+}
+
+.menu h2:after {
+  position: absolute;
+  content: '';
+  right: -3px;
+  top: -7px;
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: solid 40px transparent;
+  border-bottom: solid 79px white;
+  z-index: -1;
+}
+.menu information{
+	background-color:#FFEEFF;
+	}
+.menu information h3{
+  /*線の種類（実線） 太さ 色*/
+  border-bottom: solid 3px black;
+}
+.special menu information about all{
+	background-color:#FFEEFF;
+}
+.grandmenu h2 {
+  position: relative;
+  padding: 5px 26px 5px 42px;
+  background: #fff0d9;
+  font-size: 20px;
+  color: #2d2d2d;
+  margin-left: -33px;
+  line-height: 1.3;
+  border-bottom: solid 3px orange;
+  z-index:-2;
+}
+
+.grandmenu h2:before {
+  position: absolute;
+  content: '';
+  left: -2px;
+  top: -2px;
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: solid 40px white;
+  border-bottom: solid 79px transparent;
+  z-index: -1;
+}
+
+.grandmenu h2:after {
+  position: absolute;
+  content: '';
+  right: -3px;
+  top: -7px;
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: solid 40px transparent;
+  border-bottom: solid 79px white;
+  z-index: -1;
+}
+.grandmenu {
+	background-color:#FFEEFF;
+	}
+.grandmenu  h3{
+  /*線の種類（実線） 太さ 色*/
+  border-bottom: solid 3px black;
+}
+
+
+
+.birthday h2 {
+  position: relative;
+  padding: 5px 26px 5px 42px;
+  background: #fff0d9;
+  font-size: 20px;
+  color: #2d2d2d;
+  margin-left: -33px;
+  line-height: 1.3;
+  border-bottom: solid 3px orange;
+  z-index:-2;
+}
+
+.birthday h2:before {
+  position: absolute;
+  content: '';
+  left: -2px;
+  top: -2px;
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: solid 40px white;
+  border-bottom: solid 79px transparent;
+  z-index: -1;
+}
+
+.birthday h2:after {
+  position: absolute;
+  content: '';
+  right: -3px;
+  top: -7px;
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: solid 40px transparent;
+  border-bottom: solid 79px white;
+  z-index: -1;
+}
+.birthday {
+	background-color:#FFEEFF;
+	}
+.birthday  h3{
+  /*線の種類（実線） 太さ 色*/
+  border-bottom: solid 3px black;
+}
+
+
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="container">
+<header>
+<img src="test.cakeshop-logo.jpg" alt="スイーツで心に幸せを">
+<img src="sample.cakeshop.firstphoto.jpg">
+<h1>CAKE＆DONUTS SAMPLE </h1>
+</header>
+<div class="about this shop">
+<p>当店では旬のくだものを使ったオリジナルのケーキや定番のスイーツまで<span>多数取り揃えております！</span>
+<br>変わらず愛され続けている当店自慢のスイーツで至福のひとときをお過ごしください</p>
+</div>
+<div class="menu">
+<h2>期間限定メニュー</h2>
+</div>
+<div class="menu information">
+<img src="kikangentei.desu.jpg" alt="期間限定メニューイメージ">
+<h3>６色のカラフルドーナツセット ¥1080 </h3>
+<ul>
+<li>赤×カラフルスプレー　いちごミルク味</li>
+<li>黄×ホワイトスプレー　南国マンゴー＆ヨーグルト味</li>
+<li>赤紫×ホワイトスプレー　カシス＆ベリー味</li>
+<li>オレンジ×レインボースプレー　キャラメルシトラス味</li>
+<li>青緑×ホワイトスプレー　抹茶ミント味</li>
+<li>紫×イエロースプレー　紫芋＆さつまいも味</li>
+</ul>
+</div>
+<div class="special menu information about all">
+<p><span>季節の素材と遊び心を詰め込んだ、6色のカラフルドーナツセット。</span><br>果実の酸味とやさしい甘さが織りなす「いちごミルク」、爽やかな「南国マンゴー＆ヨーグルト」、香り高い「抹茶ミント」などそれぞれ個性あふれる６種の味をお楽しみいただけます。見た目の華やかさも相まって、贈り物やティータイムにもおすすめです。<span>単品でのご注文も可能です</span></p>
+</div>
+<div class="grandmenu">
+<h2>メニュー</h2>
+<img src="grandmenu.one.jpg" alt="グランドメニューイメージいち">
+<h3>いちごマカロンサンド 300¥</h3>
+<p>サクッとしたいちごマカロンに、爽やかなラズベリーとなめらかなクリーム。</p>
+<br><br>
+<img src="grandmenu.two" alt="グランドメニューイメージに">
+<h3>紅白チョコスプレードーナツ 300¥</h3>
+<p>見た目が面白いドーナツ！味よし見栄えよしのドーナツです。スプレーの下にはホワイトチョコソースがかかっています。</p>
+<br><br>
+<img src="grandmenu.five.jpg" alt="グランドメニューご">
+<h3>クラシック　ショコラドーナツ　300¥</h3>
+<p>サクッと香ばしい生地に甘いチョコレートをたっぷりコーティング。ホワイトチョコのラインが華やかさを添える、美味しいドーナツです。</p>
+<br><br>
+<img src="grandmenu.three.jpg" alt=グランドメニューイメージさん>
+<h3>ご褒美ストロベリーケーキ 500¥</3>
+<p>チョコといちごの相性が楽しめる、ふんわりクリームのご褒美ケーキ。サクサクのオレオと甘酸っぱいいちごがアクセント。</p>
+<br><br>
+<img src="grandmenu.four.ponchiki.jpg" alt="グランドメニューよん">
+<h3>ポーランドの伝統ドーナツ ポンチキ　500¥</h3>
+<p>ポーランドの伝統的なドーナツ。ふわふわの生地の中に伝統の薔薇ジャムを入れた新感覚の味わいです。</p>
+<br><br>
+<img src="grandmenu.six.jpg" alt="グランドメニューロク">
+<h3>ルージュブランパルフェ　500¥</h3>
+<p>しっとりとしたピンクのマーブルケーキに、軽やかなホイップとラズベリーソースをたっぷり。</p>
+<br><br>
+<img src="grandmenu.seven.jpg" alt="グランドメニューナナ">
+<h3>チョコラバーブラウニー　800¥</h3>
+<p>チョコ好き必見！しっとり濃厚なチョコブラウニーに、濃厚チョコソースをかけた贅沢な一品。</p>
+<br><br>
+<img src="grandmenu.eight.jpg" alt=グランドメニューはち>
+<h3>いちごのティアラケーキ　1200¥</h3>
+<p>ふんわり焼き上げた4層のスポンジに、いちごと生クリームをたっぷりサンド。トップにもいちごを飾り、まるで花束やティアラのような華やかさ。心もときめくスイーツです。</p>
+</div>
+<br>
+<div class="birthday">
+<h2>バースデーケーキ</h2>
+<img src="birthday.bearcake.jpg" alt="birthdaycake">
+<h3>キュートベアーバースデーケーキ　2000¥</h3>
+<p>盛大にお誕生日をお祝いできる可愛いデザインのバースデーケーキが登場！</p>
+</div>
+<div class="last information">
+<p>お問合せの電話番号　000-000-0000<br>営業時間 毎日10:00-19:00<br>ご予約可</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
